@@ -14,7 +14,7 @@ Fluxos esperados:
 *Foi criado um cenario o qual a tela foi desenvolvida por uma empresa a qual busca pequenos negocios/empresas para investimento*
 
 <p align="center">
-  <img height="600px" src="https://github.com/bruno-bh/DesafioSquadra/homeDesafio.png" />
+  <img height="600px" src="https://https://github.com/bruno-bh/DesafioSquadra/blob/master/homeDesafio.png" />
 </p>
 
 
