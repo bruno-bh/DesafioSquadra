@@ -14,7 +14,7 @@ Fluxos esperados:
 *Foi criado um cenario o qual a tela foi desenvolvida por uma empresa que busca pequenos negocios/empresas para investimento. Assim qualquer pessoa consegue acessar a enorme lista de contatos e caso queira entra no banco de dados só cadastrar o nome da empresa, email e link de site caso tenha.*
 
 <p align="center">
-  <img height="600px" src="https://github.com/bruno-bh/DesafioSquadra/blob/master/frontend/src/assets/images/homeDesafio.pnguno-bh/DesafioSquadra/blob/master/homeDesafio.png" />
+  <img height="600px" src="https://github.com/bruno-bh/DesafioSquadra/blob/master/frontend/src/assets/images/homeDesafio.png" />
 </p>
 
 
