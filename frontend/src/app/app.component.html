@@ -1,0 +1,137 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<div class="container" id="main-container">
+  <div class="row">
+    <!-- BEGIN SEARCH RESULT -->
+    <div class="col-md-12">
+      <div class="grid search">
+        <div class="grid-body">
+          <div class="row">
+            <!-- BEGIN FILTERS -->
+            <div class="col-md-8">
+              <h2 class="grid-title"><i class="fa fa-filter"></i> Filtro de consulta</h2>
+              <hr>
+              <form id="filter-form" #filterForm="ngForm" (ngSubmit)="onFilterForm(filterForm)">
+                <!-- BEGIN FILTER BY DESCRIÇÃO -->
+                <div class="f4 tam2 form-group">
+                  <label for="descricao">Descrição:</label>
+                  <input ngModel name="descricao" type="text" value="">
+                </div>
+                <!-- END FILTER BY DESCRIÇÃO -->
+                <div class="f1 tam1"></div>
+                <!-- BEGIN FILTER BY SIGLA -->
+                <div style="margin-right: 20px;" class="f3 tam3 form-group">
+                  <label for="sigla">Sigla:</label>
+                  <input ngModel name="sigla" type="text" value="">
+                </div>
+                <!-- END FILTER BY SIGLA -->
+
+                <!-- BEGIN FILTER BY email -->
+                <div class="f3 tam3 form-group">
+                  <label for="email">E-mail:</label>
+                  <input ngModel name="email" type="text" value="">
+                </div>
+                <div class="f1 tam1"></div>
+                <!-- END FILTER BY email -->
+                <span style="margin-left: -8px;" class="input-group-btn">
+                  <button class="btn btn-primary" type="submit"><i class="fa fa-search"> Pesquisar</i></button>
+                  <button class="btn btn-info" type="button" (click)="clearFilter();"><i style="color: white;">Limpar Filtro</i></button>
+                  <button style="float: right; background: green;" class="btn btn-primary" type="button" data-bs-toggle="modal"
+                    data-bs-target="#createModal"><b>Cadastrar no sistema</b></button>
+                </span>
+              </form>
+            </div>
+            <!-- END FILTERS -->
+            <div class="text-center col-sm-4">
+              <img [src]="myimage" class="rounded float-center" alt="" >
+              <h2>Invest</h2>
+              Pesquise sua empresa e seu negócio aqui! E ativaremos sua conta.
+              Não encontrou sua empresa, cadastre-se agora! Clique no botão ao lado
+              e aguarde nosso contato pelo email.
+            </div>
+            <!-- BEGIN RESULT -->
+            <div class="col-lg-12">
+              <h2><i class="fa fa-file-o"></i> Lista das empresas em nosso sistema</h2>
+              <hr>
+              <div class="padding"></div>
+              <div class="row">
+              <!-- BEGIN TABLE RESULT -->
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <th class="text-lg-center">Sigla<br>Descrição do sistema</th>
+                      <th class="th1 text-lg-center">Email</th>
+                      <th class="th1 text-lg-center">URL</th>
+                      <th class="th1 text-lg-center">Status</th>
+                    </tr>
+                    <tr *ngFor="let sistema of sistemas">
+                      <td class="text-center"><strong>{{sistema.sigla}}</strong><br>{{sistema.descricao}}</td>
+                      <td class="td1 text-center">{{sistema.email}}</td>
+                      <td class="td1 text-center">{{sistema.url}}</td>
+                      <td class="td1 text-center">{{sistema.status}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- END TABLE RESULT -->
+
+              <!-- BEGIN PAGINATION -->
+              <ul class="pagination">
+                <li class="disabled"><a class="page-link"  href="#">«</a></li>
+                <li class="active"><a class="page-link"  href="#">1</a></li>
+                <li class="page-item"><a class="page-link"  href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">»</a></li>
+              </ul>
+              <!-- END PAGINATION -->
+            </div>
+            <!-- END RESULT -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SEARCH RESULT -->
+  </div>
+</div>
+
+<!-- Modal add sistema -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createSistemaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createSistemaModalLabel">Cadastrando em nosso sistema</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #addForm="ngForm" (ngSubmit)="onAddSistema(addForm)">
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input maxlength="100" type="text" ngModel name="descricao" class="form-control" id="descricao" placeholder="Descrição"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="sigla">Sigla</label>
+            <input maxlength="10" type="text" ngModel name="sigla" class="form-control" id="sigla" placeholder="Sigla" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input maxlength="100" type="email" ngModel name="email" class="form-control" id="email" placeholder="E-mail" required>
+          </div>
+          <div class="form-group">
+            <label for="url">url</label>
+            <input maxlength="50" type="text" ngModel name="url" class="form-control" id="url" placeholder="URL" required>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="new-sistema-form" class="btn btn-secondary"
+              data-bs-dismiss="modal">Fechar</button>
+            <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Salvar Sistema</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

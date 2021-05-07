@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
+body{margin-top:20px;
+  background:rgb(95, 91, 91);
+  }
+
+  .btn {
+      margin-bottom: 5px;
+      margin: 10px;
+
+  }
+
+  .page-link{
+    background: rgb(255, 255, 255);
+    background-color: #c7c4c4 !important;
+  }
+
+  .grid {
+      position: relative;
+      width: 100%;
+      background: rgb(223, 221, 221);
+      color: #a09e9e;
+      border-radius: 2px;
+      margin-bottom: 25px;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .grid .grid-body {
+      padding: 15px 20px 15px 20px;
+      font-size: 0.9em;
+      line-height: 1.9em;
+  }
+
+  .search table tr td.image {
+    width: 50px;
+  }
+
+  .search table tr td img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .search table tr td.price {
+    font-size: 1.0em;
+    line-height: 50px;
+  }
+
+  .search #price1,
+  .search #price2 {
+    display: inline;
+    font-weight: 600;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 2px solid #c5bdbd !important;
+    text-align: center;
+    padding: 8px;
+  }
+
+  th{
+    background-color: #000000 !important;
+    color: #dddddd;
+  }
+
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+
+  }
+
+  .th1{
+    padding-top: 20px !important;
+  }
+
+
+.f3, .f4, .f2{
+  float: left;
+}
+
+.f2 {
+  width: 45%;
+  width: calc(50% - 10px);
+}
+
+.f3 {
+  width: 30%;
+  width: calc(33.3% - 10px);
+}
+
+.f4 {
+  width: 21%;
+  width: calc(25% - 10px);
+}
+
+.f2, .f3, .f4 {
+  clear: none;
+  margin-right: 0px;
+}
+
+div {
+  padding: 8px 0;
+  clear: left;
+}
+input{
+  border: 1px solid #b9babb;
+}
+
+label {
+  padding: 0 0 8px;
+  width: auto;
+}
+
+
+.tam2 input[type="text"] {
+  width: 413px;
+}
+
+
