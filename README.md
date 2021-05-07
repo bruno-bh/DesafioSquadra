@@ -10,6 +10,14 @@ Fluxos esperados:
 - Caso o sistema não exista irá cadastrar um para visualizar o mesmo;
 -Ao final irá limpar o filtro atravez de um botão e finalizar o acesso.
 
+### Imagem da tela criada
+*Foi criado um cenario o qual a tela foi desenvolvida por uma empresa a qual busca pequenos negocios/empresas para investimento*
+
+<p align="center">
+  <img height="600px" src="https://github.com/bruno-bh/DesafioSquadra/homeDesafio.png" />
+</p>
+
+
 ### Ferramentas gerais de desenvolvimento
 
 - IDE backend: **IntelliJ IDEA**
@@ -30,14 +38,18 @@ Fluxos esperados:
 
 
 ### Resumo do desafio
-## backend
+## Backend
 
   - Foi utilizado IntelliJ como IDE por ser uma facilitadora de processos. Alem de um auto preenchimento muito dinâmico e inteligente, a IDE conta aba para banco de dados reduzindo o uso de ferramentas durante a programação.
   - A aplicação roda na porta :8080 e conta com um swagger implementado nos controllers, podendo ser acessado na rota
   *localhost:8080/swagger-ui.html*
 
-## frontend
+## Frontend
 
 - Utilizando o Angular CLI e sua documentação foi gerado um projeto angular e utilizado o VSCode para edição.
 - Dentro da pasta *frontend* do projeto git, é possivel executar utilizando o comando **ng serve**.
 - Finalizado o deploy a tela do desafio se encontra no *localhost:4200*
+
+## Database
+
+- Foi utilizado como banco de dados o MySQL versão 5.7
